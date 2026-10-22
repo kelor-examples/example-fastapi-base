@@ -12,6 +12,7 @@ import { client } from "./client/client.gen"
 import { ThemeProvider } from "./components/theme-provider"
 import { Toaster } from "./components/ui/sonner"
 import "./index.css"
+import { Providers } from "./providers"
 import { routeTree } from "./routeTree.gen"
 // kelor:imports
 
@@ -49,7 +50,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
+        <Providers>
+          <RouterProvider router={router} />
+        </Providers>
         <Toaster richColors closeButton />
         {/* kelor:providers */}
       </QueryClientProvider>
