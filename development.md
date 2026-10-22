@@ -1,5 +1,7 @@
 # FastAPI Project - Development
 
+> **Generated with Kelor Blocks?** Kelor adds a Block's packages to `backend/pyproject.toml` and `frontend/package.json`, but doesn't update `uv.lock` or `bun.lock`. Before building with Docker Compose, whose backend image installs with `uv sync --frozen`, run `uv lock` and `bun install` at the project root.
+
 ## Local Development
 
 For local development, run PostgreSQL and Mailpit with Docker Compose, and run the FastAPI and Vite development servers locally.
