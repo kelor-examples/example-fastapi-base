@@ -52,9 +52,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <QueryClientProvider client={queryClient}>
         <Providers>
           <RouterProvider router={router} />
+          <Toaster richColors closeButton />
+          {/* kelor:providers */}
         </Providers>
-        <Toaster richColors closeButton />
-        {/* kelor:providers */}
       </QueryClientProvider>
     </ThemeProvider>
   </StrictMode>,
